@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         )
         ),
     );
-  }ls
+  }
 }
 
 class MyHomePage extends StatefulWidget {
