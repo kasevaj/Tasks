@@ -30,27 +30,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  # Add any other direct dependencies your app requires here
+  http: 1.2.2 # Example package, update as needed
+  provider: ^6.0.0 # Example package, update as needed
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^5.0.0 # Update if newer version available
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^4.0.0
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
+# Optional: Dependency overrides for transitive dependencies
+dependency_overrides:
+  collection: ^1.19.0
+  material_color_utilities: ^0.12.0
+  meta: ^1.16.0
 flutter:
 
   # The following line ensures that the Material Icons font is

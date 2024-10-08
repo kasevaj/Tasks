@@ -1,3 +1,14 @@
+buildscript {
+    repositories {
+        google() // Required for Android plugins
+        mavenCentral() // Required for other dependencies
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.0' // Ensure this is correct
+        // If using Kotlin, uncomment the following line:
+        // classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
 allprojects {
     repositories {
         google()

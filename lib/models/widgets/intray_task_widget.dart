@@ -4,10 +4,13 @@ import 'package:task_app/models/global.dart';
 
 class IntrayLog extends StatelessWidget {
   final String title;
-  IntrayLog({required this.title});
+  final String keyValue;
+  IntrayLog({ required this.keyValue, required this.title});
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return ListTile(
+      key: Key(keyValue),
+      title: Container(
       margin: EdgeInsets.only(bottom: 9, left: 10, right: 10),
       padding: EdgeInsets.all(10),
       height: 90,
@@ -36,6 +39,7 @@ class IntrayLog extends StatelessWidget {
 
           ],)
       ],),
+    )
     );
   }
 }
