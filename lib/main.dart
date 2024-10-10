@@ -44,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   // Hide the status bar
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
 }
+  @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,

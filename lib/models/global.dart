@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Color darkGrey = Color.fromARGB(255, 15, 28, 38);
-Color greenColor = const Color.fromARGB(188, 89, 255, 155);
+Color greenColor = const Color.fromARGB(187, 122, 159, 137);
 
 TextStyle tekstiTyyli1 = TextStyle(
   fontFamily: 'Avenir', 

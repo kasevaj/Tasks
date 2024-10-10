@@ -9,9 +9,9 @@ class IntrayLog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      key: Key(keyValue),
+      key: ValueKey(keyValue),
       title: Container(
-      margin: EdgeInsets.only(bottom: 9, left: 10, right: 10),
+      margin: EdgeInsets.only(bottom: 5),
       padding: EdgeInsets.all(10),
       height: 90,
       decoration: BoxDecoration(
