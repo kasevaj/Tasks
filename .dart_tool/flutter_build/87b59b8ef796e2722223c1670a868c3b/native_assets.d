@@ -1,0 +1,1 @@
+ C:\\Users\\jasmi\\TasksApp\\task_app\\.dart_tool\\flutter_build\\87b59b8ef796e2722223c1670a868c3b\\native_assets.yaml: 
