@@ -21,6 +21,17 @@ class User(db.Model):
 
     def __repr__(self):
         return f"<User id={self.id} username={self.username}>"
+    
+    def serialize(self):
+        return {
+            'api_key' : self.api_key,
+            'id' : self.id,
+            'username' : self.username,
+            'firstname' : self.firstname,
+            'lastname' : self.lastname,
+            'password' : self.password,
+            'emailaddress' : self.emailaddress,
+        }
 
 
 class Task(db.Model):

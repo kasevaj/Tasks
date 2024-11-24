@@ -13,6 +13,7 @@ class Register(Resource):
         return { "status" : str(user_list)}, 200
 
     def post(self):
+      
         json_data = request.get_json(force=True)
 
         if not json_data:
@@ -22,7 +23,7 @@ class Register(Resource):
         if user:
             return {'message': 'Username not available'}, 400
 
-        user = User.query.filter_by(emailadress=json_data['emailadress']).first()
+        user = User.query.filter_by(emailaddress=json_data['emailaddress']).first()
         if user:
             return {'message': 'Email address already exists'}, 400
         
@@ -36,7 +37,7 @@ class Register(Resource):
             api_key = api_key,
             firstname = json_data['firstname'],
             lastname = json_data['lastname'],
-            emailadress = json_data['emailadress'],
+            emailaddress = json_data['emailaddress'],
             password = json_data['password'],
             username = json_data['username'],
         )
