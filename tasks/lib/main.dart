@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/UI/Login/loginscreen.dart';
 import 'models/global.dart';
 import 'UI/Intray/Intray_page.dart';
 import 'package:flutter/services.dart';
-
-
-
 
 void main() {
   runApp(const MyApp());
@@ -14,15 +12,13 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(
-        title: "Diary",
-        theme: ThemeData(
-          primarySwatch: Colors.grey,
-        )
-        ),
+      title: "Tasks",
+      theme: ThemeData(
+        primarySwatch: Colors.grey,
+      ),
+      home: LoginPage(),
     );
   }
 }
@@ -33,17 +29,17 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
-  super.initState();
-  // Hide the status bar
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
-}
+    super.initState();
+    // Hide the status bar
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
