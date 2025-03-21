@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tasks/UI/Login/loginscreen.dart';
 import 'models/global.dart';
 import 'UI/Intray/Intray_page.dart';
 import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const MyApp());
@@ -18,9 +20,43 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.grey,
       ),
-      home: LoginPage(),
+      home: FutureBuilder(
+          future: getUser(),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            return Container(
+              margin: EdgeInsets.only(top: 80, left: 170),
+              child: ElevatedButton(
+                child: Icon(Icons.add, color: greenColor),
+                onPressed: () {},
+              ),
+            );
+          }),
     );
   }
+}
+
+Future getUser() async {
+  var result = await http.get('http://127.0.0.1:5000/api/register' as Uri);
+  print(result.body);
+  return result;
+  //String apiKey = await getApiKey();
+  //if (apiKey.isEmpty) {
+  // login user
+  //} else {
+  //  get()
+  //}
+}
+
+Future<String> getApiKey() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  String apiKey;
+  try {
+    apiKey = prefs.getString('API_Token')!;
+  } catch (Exception) {
+    apiKey = "";
+  }
+
+  return apiKey;
 }
 
 class MyHomePage extends StatefulWidget {
