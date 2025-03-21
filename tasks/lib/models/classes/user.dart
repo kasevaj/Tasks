@@ -17,7 +17,7 @@ class User {
     this.id,
   );
 
-  User.fromJSON(Map<String, dynamic> parsedJson)
+  User.fromJson(Map<String, dynamic> parsedJson)
       : username = parsedJson['username'],
         lastname = parsedJson['lastname'],
         firstname = parsedJson['firstname'],
